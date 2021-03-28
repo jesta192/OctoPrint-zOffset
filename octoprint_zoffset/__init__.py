@@ -47,4 +47,5 @@ def __plugin_init__():
         "octoprint.comm.protocol.scripts": plugin.script_hook
     }
 
+__plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_name__ = "zOffset"
