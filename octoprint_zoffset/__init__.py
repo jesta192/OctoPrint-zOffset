@@ -33,10 +33,10 @@ class ZOffset(octoprint.plugin.TemplatePlugin,
 				return None
 	
 			if script_name == "beforePrintStarted":
-				return ["M206 Z" + self._settings.get_int(["zOffset"])], None
+				return ["M206 Z" + str(self._settings.get_float(["zOffset"]))], None
 
 			if script_name == "afterPrinterConnected":
-				return ["M206 Z" + self._settings.get_int(["zOffset"])], None
+				return ["M206 Z" + str(self._settings.get_float(["zOffset"]))], None
 
 def __plugin_init__():
     global __plugin_implementations__
